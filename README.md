@@ -4,10 +4,20 @@ A collection of utils for using with [Parallels Desktop 9](http://www.parallels.
 
 ![Parallels Logo](imgs/parallels_small.png)
 
-### Building
+### Requirements
 
-* Requires [Parallels Virtualization SDK 9 for Mac](http://www.parallels.com/downloads/desktop/), download and install it.
+* [Parallels Virtualization SDK 9 for Mac](http://www.parallels.com/downloads/desktop/), download and install it.
 
+### Install with Homebrew
+
+```
+brew tap rickard-von-essen/formulae
+brew install --HEAD prl-utils
+```
+
+### Building from Source
+
+* Install requirements
 * Build
 
 ```
@@ -30,9 +40,6 @@ For a complete set of keyboard scan codes see:
 
 Every key is sent with two codes, first the _pressed_ and then the _release_ code. The _release_ code is the same as _pressed_ (listed in the table) plus ```0x128```. 
 
-### Install with Homebrew
-
-TODO
 
 ## License
 
