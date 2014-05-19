@@ -168,6 +168,7 @@ PRL_RESULT ConnectToConsole( PRL_HANDLE vm ) {
 
 PRL_RESULT DisconnectFromConsole( PRL_HANDLE vm ) {
 
+  nanosleep((struct timespec[]){{0, 10000000}}, NULL);
   PRL_RESULT err = PrlDevDisplay_DisconnectFromVm( vm );
   if (PRL_FAILED(err)) {
       fprintf(stderr, "PrlDevDisplay_DisconnectFromVm returned with error: %s\n", prl_result_to_string(err));
